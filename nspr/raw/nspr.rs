@@ -1,4 +1,4 @@
-use std::libc::{c_char, c_int, c_void, c_ulong, c_uint, c_short, c_ushort};
+use std::libc::{c_char, c_int, c_void, c_uint, c_ushort};
 
 #[link_args = "-lnspr4"]
 #[nolink]

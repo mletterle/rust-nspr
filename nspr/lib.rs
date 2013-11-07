@@ -1,5 +1,5 @@
+#[link(name = "nspr", vers = "0.0")];
 #[feature(globs)];
-#[link(name = "nspr", vers = "0.0")]
 
 pub use raw::*;
 
