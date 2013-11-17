@@ -1,7 +1,5 @@
 use std::libc::{c_char, c_int, c_void, c_uint, c_ushort};
 
-#[link_args = "-lnspr4"]
-#[nolink]
 
 pub type PRBool = c_int;
 pub type PRStatus = c_int;
@@ -21,6 +19,8 @@ pub struct PRNetAddr {
      pad: [c_char, ..8],
 
 }
+
+#[link_args = "-lnspr4"]
 extern "C" {  
 pub fn PR_OpenTCPSocket(af: c_ushort) -> *c_void;
 pub fn PR_Connect(fd: *c_void, addr: *PRNetAddr, timout: c_uint) -> PRStatus;
